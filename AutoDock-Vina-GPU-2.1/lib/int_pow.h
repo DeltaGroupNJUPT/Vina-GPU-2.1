@@ -1,0 +1,47 @@
+/*
+
+   Copyright (c) 2006-2010, The Scripps Research Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+   Author: Dr. Oleg Trott <ot14@columbia.edu>, 
+           The Olson Lab, 
+           The Scripps Research Institute
+
+*/
+
+#ifndef VINA_INT_POW_H
+#define VINA_INT_POW_H
+
+#include "common.h" // for fl
+
+
+
+
+/*IN: n  UINT类型 、x  double类型
+* out： x的n次方   double类型
+  function：输入函数参数double类型X和模板参数UINT类型n   输出x的n次方
+*/
+template<unsigned n>
+inline fl int_pow(fl x) {
+	return int_pow<n-1>(x)*x; // tests seem to suggest that even for largish n's this optimizes well
+}
+
+
+
+template<>
+inline fl int_pow<0>(fl x) {
+	return 1;
+}
+
+#endif

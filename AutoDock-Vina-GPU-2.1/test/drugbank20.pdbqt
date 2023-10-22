@@ -1,0 +1,43 @@
+REMARK  Name = 6057
+REMARK  6 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_10
+REMARK    2  A    between atoms: OH_2  and  CZ_13
+REMARK    3  A    between atoms: N_4  and  CA_6
+REMARK    4  A    between atoms: CB_5  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CG_7
+REMARK    6  A    between atoms: CA_6  and  C_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CB  TYR A   1      -1.049   1.021   0.763  0.00  0.00    +0.065 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CG  TYR A   1       0.362   0.577   0.453  0.00  0.00    -0.045 A 
+ATOM      3  CD2 TYR A   1       1.208   1.437  -0.228  0.00  0.00    +0.007 A 
+ATOM      4  CE2 TYR A   1       2.510   1.028  -0.514  0.00  0.00    +0.045 A 
+ATOM      5  CZ  TYR A   1       2.948  -0.235  -0.116  0.00  0.00    +0.117 A 
+ATOM      6  CE1 TYR A   1       2.083  -1.089   0.569  0.00  0.00    +0.045 A 
+ATOM      7  CD1 TYR A   1       0.780  -0.680   0.855  0.00  0.00    +0.007 A 
+BRANCH   5   8
+ATOM      8  OH  TYR A   1       4.218  -0.635  -0.395  0.00  0.00    -0.507 OA
+ATOM      9  HH  TYR A   1       4.349  -1.534  -0.047  0.00  0.00    +0.292 HD
+ENDBRANCH   5   8
+ENDBRANCH   1   2
+BRANCH   1  10
+ATOM     10  CA  TYR A   1      -2.048   0.655  -0.346  0.00  0.00    +0.165 C 
+BRANCH  10  11
+ATOM     11  N   TYR A   1      -3.239   1.495  -0.235  0.00  0.00    -0.318 NA
+ATOM     12  H1  TYR A   1      -3.630   1.419   0.704  0.00  0.00    +0.119 HD
+ATOM     13  H2  TYR A   1      -2.978   2.474  -0.349  0.00  0.00    +0.119 HD
+ENDBRANCH  10  11
+BRANCH  10  14
+ATOM     14  C   TYR A   1      -2.520  -0.785  -0.238  0.00  0.00    +0.322 C 
+ATOM     15  OXT TYR A   1      -3.480  -1.158   0.423  0.00  0.00    -0.249 OA
+BRANCH  14  16
+ATOM     16  O   TYR A   1      -1.773  -1.631  -0.993  0.00  0.00    -0.480 OA
+ATOM     17  H   TYR A   1      -2.091  -2.557  -0.928  0.00  0.00    +0.295 HD
+ENDBRANCH  14  16
+ENDBRANCH  10  14
+ENDBRANCH   1  10
+TORSDOF 6

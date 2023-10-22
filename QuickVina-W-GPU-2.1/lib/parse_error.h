@@ -1,0 +1,44 @@
+/*
+
+   Copyright (c) 2006-2010, The Scripps Research Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+   Author: Dr. Oleg Trott <ot14@columbia.edu>, 
+           The Olson Lab, 
+           The Scripps Research Institute
+
+*/
+
+#ifndef VINA_PARSE_ERROR_H
+#define VINA_PARSE_ERROR_H
+
+#include "common.h"
+/*
+* 结构体parse_error
+*数据成员包括:boost::filesystem库path类file;无符号类型整数line;string类reason
+*构造函数parse_error在创建parse_error对象时参数列表不提供path,line,reason时执行默认初始化，反之依次初始化成员path,line,reason
+*path类的构造函数可接受char*类型和string类型的参数构造，也可以是一个字符串迭代范围,路径的分割符由constexpr preferred_separator定义,UNIX是正斜杠(/),WINDOWS是反斜杠(\),C++中需要转义;
+*初始化path类对象时，参数列表传入文件在电脑的地址 
+*/
+
+struct parse_error {
+	path file;
+	unsigned line;
+	std::string reason;
+	parse_error(const path& file_, unsigned line_, const std::string& reason_ = "") : file(file_), line(line_), reason(reason_) {}
+private:
+	parse_error() {}
+};
+
+#endif

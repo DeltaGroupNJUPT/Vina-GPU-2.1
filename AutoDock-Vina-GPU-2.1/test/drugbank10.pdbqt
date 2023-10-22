@@ -1,0 +1,48 @@
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      -0.171   0.875   0.492  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      -0.770   0.493  -0.870  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      -2.299   0.356  -0.813  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      -2.892   1.602  -0.334  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      -2.621   2.369  -0.949  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      -3.908   1.542  -0.388  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      -2.746  -0.721   0.159  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      -3.444  -0.531   1.147  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      -2.303  -1.954  -0.204  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      -2.603  -2.648   0.421  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1       1.345   1.033   0.437  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1       1.964  -0.236   0.050  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1       3.260  -0.263   0.006  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1       4.137   0.763   0.281  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1       3.821   1.686   0.556  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1       5.139   0.625   0.213  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1       3.918  -1.417  -0.350  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1       4.931  -1.459  -0.390  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1       3.406  -2.261  -0.582  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7

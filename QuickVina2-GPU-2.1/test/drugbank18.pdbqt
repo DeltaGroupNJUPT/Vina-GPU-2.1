@@ -1,0 +1,34 @@
+REMARK  Name = 5951
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: OG_1  and  CB_6
+REMARK    2  A    between atoms: O_2  and  C_7
+REMARK    3  A    between atoms: N_4  and  CA_5
+REMARK    4  A    between atoms: CA_5  and  CB_6
+REMARK    5  A    between atoms: CA_5  and  C_7
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  SER A   1       0.250  -0.572   0.467  0.00  0.00    +0.186 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   SER A   1      -0.178  -1.961   0.315  0.00  0.00    -0.317 NA
+ATOM      3  H1  SER A   1      -1.042  -2.118   0.832  0.00  0.00    +0.119 HD
+ATOM      4  H2  SER A   1      -0.383  -2.161  -0.664  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   SER A   1      -0.890   0.309  -0.007  0.00  0.00    +0.324 C 
+ATOM      6  OXT SER A   1      -1.688   0.044  -0.896  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   SER A   1      -0.915   1.473   0.693  0.00  0.00    -0.479 OA
+ATOM      8  H   SER A   1      -1.643   2.061   0.399  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  SER A   1       1.504  -0.323  -0.365  0.00  0.00    +0.185 C 
+BRANCH   9  10
+ATOM     10  OG  SER A   1       1.916   1.031  -0.206  0.00  0.00    -0.393 OA
+ATOM     11  H   SER A   1       2.102   1.171   0.738  0.00  0.00    +0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5

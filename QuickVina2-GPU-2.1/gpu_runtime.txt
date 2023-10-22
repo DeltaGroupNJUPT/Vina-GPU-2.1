@@ -1,0 +1,4 @@
+GPU total runtime = 968.329 s
+GPU total runtime = 8582.76 s
+GPU total runtime = 17.6305 s
+GPU total runtime = 17.5953 s
