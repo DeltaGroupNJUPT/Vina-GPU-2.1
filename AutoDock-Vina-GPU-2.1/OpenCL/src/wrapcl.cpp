@@ -353,13 +353,13 @@ void SetupBuildProgramWithSource(cl_program program_cl, cl_program program_head,
     std::string option = " -Werror -cl-single-precision-constant -cl-unsafe-math-optimizations -cl-mad-enable -cl-std=";
 #ifdef OPENCL_1_2
     option += std::string("CL1.2");
-    printf("\nOpenCL version: 1.2");fflush(stdout);
+    printf("\nOpenCL version: 1.2\n");fflush(stdout);
 #elif OPENCL_2_0
     option += std::string("CL2.0");
-    printf("\nOpenCL version: 2.0"); fflush(stdout);
+    printf("\nOpenCL version: 2.0\n"); fflush(stdout);
 #elif OPENCL_3_0
     option += std::string("CL3.0");
-    printf("\nOpenCL version: 3.0");fflush(stdout);
+    printf("\nOpenCL version: 3.0\n");fflush(stdout);
 #endif
     std::string head_inc_path = "-I ";
     std::string full_path = head_inc_path + include_path + option + addtion;

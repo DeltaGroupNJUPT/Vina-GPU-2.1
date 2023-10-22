@@ -1,0 +1,522 @@
+MODEL 1
+REMARK VINA RESULT:      -5.0      0.000      0.000
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      43.657 109.977  82.071  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      43.624 111.444  80.988  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      44.978 111.763  80.348  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      45.067 110.958  79.088  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      45.647 111.429  78.381  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      45.475 110.028  79.256  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      44.136 110.813  78.674  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      46.208 111.652  81.266  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      47.106 110.849  80.887  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      46.188 112.401  82.285  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      42.534 110.625  83.664  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      43.780 111.445  84.686  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      43.371 111.585  86.155  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      43.633 113.007  86.549  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      43.401 113.165  87.539  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      44.622 113.256  86.422  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      43.070 113.666  85.996  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      43.946 110.537  87.125  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      43.399 110.485  88.263  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      44.884 109.830  86.660  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:      -4.8      1.007      1.436
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      44.208 111.425  83.010  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      44.086 110.977  81.247  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      45.092 111.711  80.357  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      45.045 111.058  79.010  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      44.748 111.720  78.281  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      45.963 110.682  78.735  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      44.379 110.272  79.002  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      46.508 111.887  80.933  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      46.864 113.077  81.166  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      47.146 110.813  81.131  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      42.501 110.567  83.764  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      42.007 111.771  85.021  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      42.799 111.655  86.325  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      43.768 112.798  86.353  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      43.745 113.323  85.469  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      43.546 113.459  87.109  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      44.734 112.476  86.491  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      43.426 110.280  86.622  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      44.672 110.192  86.435  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      42.622 109.403  87.046  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:      -4.8      2.075      2.401
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      42.681 111.207  81.980  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      44.032 110.450  81.018  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      44.941 111.473  80.330  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      45.001 111.100  78.881  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      44.062 111.058  78.464  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      45.555 111.775  78.335  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      45.436 110.176  78.753  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      46.312 111.714  80.985  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      46.642 110.895  81.889  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      46.965 112.694  80.523  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      43.590 111.492  83.800  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      42.333 112.434  84.697  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      42.844 113.045  86.004  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      43.710 112.015  86.662  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      43.191 111.140  86.815  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      44.530 111.789  86.083  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      44.051 112.331  87.579  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      41.781 113.669  86.927  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      41.404 114.835  86.622  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      41.387 112.928  87.872  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:      -4.7      2.118      2.404
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      43.348 109.908  82.251  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      44.190 110.483  80.740  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      45.104 111.690  80.970  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      45.370 112.300  79.628  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      44.704 113.055  79.420  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      46.318 112.696  79.568  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      45.284 111.600  78.878  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      46.363 111.438  81.817  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      47.322 110.869  81.223  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      46.302 111.855  83.010  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      42.468 111.643  82.909  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      42.669 111.504  84.701  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      42.675 112.854  85.423  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      43.727 112.777  86.488  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      43.363 112.320  87.334  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      44.542 112.236  86.172  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      44.058 113.710  86.764  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      41.309 113.372  85.911  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      41.285 114.575  86.298  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      40.362 112.539  85.842  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:      -4.7      1.932      5.404
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      42.709 109.764  82.603  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      42.249 110.590  84.162  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      43.235 111.679  84.592  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      44.498 110.989  85.004  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      44.616 110.095  84.510  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      45.330 111.564  84.811  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      44.497 110.784  86.013  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      42.710 112.711  85.607  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      43.447 112.916  86.612  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      41.609 113.254  85.302  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      42.860 111.366  81.326  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      44.408 111.006  80.463  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      45.538 111.983  80.799  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      46.103 112.465  79.497  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      45.377 112.499  78.769  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      46.494 113.411  79.585  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      46.849 111.847  79.153  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      46.590 111.489  81.807  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      46.408 111.839  83.008  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      47.504 110.765  81.320  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:      -4.7      2.665      3.033
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      43.069 111.397  82.559  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      44.479 110.257  82.370  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      45.824 110.969  82.196  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      46.018 111.839  83.399  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      46.842 111.550  83.943  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      46.146 112.827  83.141  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      45.203 111.791  84.027  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      46.047 111.681  80.850  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      45.402 111.216  79.868  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      46.835 112.670  80.889  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      42.347 110.846  84.401  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      42.919 112.208  85.445  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      41.781 113.032  86.053  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      40.832 113.357  84.939  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      41.249 113.142  84.024  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      39.962 112.814  85.017  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      40.579 114.354  84.932  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      42.197 114.241  86.910  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      43.387 114.230  87.335  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      41.304 115.121  87.069  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:      -4.7     11.705     12.869
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      47.412  99.450  88.024  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      47.009 101.208  87.755  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      46.473 101.505  86.352  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      47.650 101.518  85.426  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      48.171 102.403  85.493  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      48.308 100.753  85.632  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      47.353 101.410  84.447  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      45.545 102.726  86.223  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      44.396 102.495  85.749  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      46.032 103.819  86.631  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      49.429  99.549  88.397  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      50.039  98.087  87.524  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      50.267  98.318  86.028  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      50.852  99.690  85.880  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      51.018 100.121  86.799  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      51.753  99.662  85.386  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      50.227 100.317  85.357  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      49.069  98.032  85.104  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      48.768  98.953  84.293  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      48.539  96.894  85.246  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:      -4.7      2.086      2.524
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      42.136 109.987  82.072  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      43.937 109.884  81.811  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      44.584 111.228  81.467  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      44.295 111.497  80.022  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      43.299 111.704  79.870  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      44.838 112.295  79.665  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      44.531 110.682  79.439  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      46.061 111.395  81.865  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      46.271 111.833  83.031  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      46.898 111.048  80.983  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      41.961 111.827  82.967  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      42.573 111.487  84.635  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      42.745 112.744  85.492  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      43.901 112.492  86.412  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      43.723 112.885  87.345  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      44.074 111.485  86.530  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      44.768 112.920  86.062  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      41.479 113.273  86.188  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      41.381 114.530  86.269  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      40.667 112.386  86.577  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:      -4.7      3.344      3.729
+REMARK  Name = 6992103
+REMARK  9 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SG_1  and  SG_2
+REMARK    2  A    between atoms: SG_1  and  CB_11
+REMARK    3  A    between atoms: SG_2  and  CB_12
+REMARK    4  A    between atoms: N_7  and  CA_9
+REMARK    5  A    between atoms: N_8  and  CA_10
+REMARK    6  A    between atoms: CA_9  and  CB_11
+REMARK    7  A    between atoms: CA_9  and  C_13
+REMARK    8  A    between atoms: CA_10  and  CB_12
+REMARK    9  A    between atoms: CA_10  and  C_14
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  SG  CYS A   1      42.971 109.709  82.037  0.00  0.00    -0.087 S 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  CYS A   1      43.882 111.279  81.866  0.00  0.00    +0.141 C 
+BRANCH   2   3
+ATOM      3  CA  CYS A   1      45.294 111.234  82.456  0.00  0.00    +0.118 C 
+BRANCH   3   4
+ATOM      4  N   CYS A   1      45.214 111.823  83.831  0.00  0.00    +0.226 N 
+ATOM      5  H1  CYS A   1      45.923 111.417  84.455  0.00  0.00    +0.200 HD
+ATOM      6  H2  CYS A   1      45.354 112.842  83.820  0.00  0.00    +0.200 HD
+ATOM      7  H3  CYS A   1      44.293 111.647  84.256  0.00  0.00    +0.200 HD
+ENDBRANCH   3   4
+BRANCH   3   8
+ATOM      8  C   CYS A   1      46.417 111.814  81.577  0.00  0.00    +0.090 C 
+ATOM      9  OXT CYS A   1      46.875 112.935  81.939  0.00  0.00    -0.544 OA
+ATOM     10  O   CYS A   1      46.770 111.086  80.606  0.00  0.00    -0.544 OA
+ENDBRANCH   3   8
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  SG  CYS A   1      41.027 110.347  81.856  0.00  0.00    -0.087 S 
+BRANCH  11  12
+ATOM     12  CB  CYS A   1      40.537 110.536  83.587  0.00  0.00    +0.141 C 
+BRANCH  12  13
+ATOM     13  CA  CYS A   1      39.942 111.909  83.908  0.00  0.00    +0.118 C 
+BRANCH  13  14
+ATOM     14  N   CYS A   1      38.963 112.228  82.819  0.00  0.00    +0.226 N 
+ATOM     15  H1  CYS A   1      38.798 113.241  82.755  0.00  0.00    +0.200 HD
+ATOM     16  H2  CYS A   1      39.306 111.913  81.902  0.00  0.00    +0.200 HD
+ATOM     17  H3  CYS A   1      38.051 111.781  82.983  0.00  0.00    +0.200 HD
+ENDBRANCH  13  14
+BRANCH  13  18
+ATOM     18  C   CYS A   1      40.948 113.034  84.211  0.00  0.00    +0.090 C 
+ATOM     19  OXT CYS A   1      40.495 114.211  84.138  0.00  0.00    -0.544 OA
+ATOM     20  O   CYS A   1      42.110 112.647  84.524  0.00  0.00    -0.544 OA
+ENDBRANCH  13  18
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 9
+ENDMDL

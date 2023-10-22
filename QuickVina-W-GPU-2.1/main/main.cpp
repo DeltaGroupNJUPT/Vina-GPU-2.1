@@ -548,7 +548,7 @@ Thank you!\n";
 		int cpu = 1, seed, exhaustiveness = 1, verbosity = 2, num_modes = 9;
 		fl energy_range = 2.0;
 		int search_depth = 0;
-		int thread = 8000;
+		int thread = 5000;
 		std::string ligand_directory, output_directory, opencl_binary_path;
 		opencl_binary_path = ".";
 		int rilc_bfgs = 1;

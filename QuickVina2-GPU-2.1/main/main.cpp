@@ -512,7 +512,7 @@ Thank you!\n";
 
 	const std::string cite_message = "\
 #################################################################\n\
-# If you used QuickVina 2-GPU 2.1 in your work, please cite:    #\n\
+# If you used QuickVina2-GPU 2.1 in your work, please cite:    #\n\
 #                                                               #\n\
 # Ding, Ji, et al. Vina-GPU 2.0: Further Accelerating AutoDock  #\n\
 # Vina and Its Derivatives with Graphics Processing Units.      #\n\

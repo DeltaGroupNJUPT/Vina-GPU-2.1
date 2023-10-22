@@ -1,0 +1,459 @@
+MODEL 1
+REMARK VINA RESULT:      -5.4      0.000      0.000
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      43.435 111.251  81.407  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      44.508 110.790  80.409  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      45.346 111.962  79.875  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      45.750 111.697  78.497  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      46.134 110.755  78.427  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      44.932 111.714  77.889  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      46.631 112.156  80.658  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      47.157 113.238  80.891  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      47.138 110.979  81.111  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      46.607 110.613  81.850  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      43.943 111.260  82.845  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      42.947 111.878  83.721  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      43.323 112.146  84.933  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      44.555 111.921  85.506  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      45.320 111.497  84.994  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      44.736 112.175  86.470  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      42.445 112.726  85.819  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      42.719 112.945  86.771  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      41.496 112.953  85.543  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:      -5.2      1.095      1.603
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      44.112 110.091  81.308  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      44.009 111.454  80.605  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      45.389 112.025  80.243  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      45.839 111.466  78.971  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      45.238 110.685  78.708  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      45.736 112.163  78.234  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      46.451 111.656  81.262  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      47.343 110.835  81.083  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      46.325 112.367  82.414  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      45.401 112.365  82.745  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      43.367 110.065  82.639  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      44.273 110.450  83.723  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      43.874 111.405  84.504  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      42.693 112.111  84.442  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      41.992 111.932  83.732  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      42.486 112.842  85.113  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      44.668 111.826  85.546  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      44.374 112.571  86.169  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      45.571 111.400  85.721  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:      -5.2      1.176      1.449
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      42.727 110.853  82.083  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      44.060 110.349  81.510  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      44.779 111.425  80.684  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      44.944 110.966  79.307  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      44.764 111.738  78.665  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      45.913 110.690  79.150  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      46.178 111.710  81.200  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      46.942 112.547  80.736  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      46.493 110.940  82.275  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      47.394 110.558  82.199  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      42.903 111.585  83.409  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      43.601 110.723  84.365  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      44.044 111.289  85.445  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      43.938 112.613  85.810  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      43.478 113.301  85.225  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      44.326 112.945  86.686  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      44.712 110.549  86.392  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      45.065 110.972  87.244  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      44.868 109.555  86.265  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:      -5.1      1.802      2.154
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      45.558 111.589  83.075  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      45.689 110.993  81.665  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      44.788 111.708  80.647  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      43.573 110.929  80.425  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      43.326 110.953  79.435  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      43.746 109.950  80.649  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      45.450 111.848  79.288  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      46.397 112.583  79.039  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      44.887 111.032  78.358  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      44.221 110.431  78.755  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      44.529 110.850  83.925  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      44.535 111.383  85.288  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      43.534 112.137  85.624  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      42.454 112.502  84.851  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      42.346 112.194  83.891  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      41.725 113.100  85.222  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      43.466 112.678  86.886  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      42.691 113.269  87.169  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      44.191 112.499  87.572  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:      -5.0      3.150      5.528
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      43.198 110.585  82.763  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      42.900 110.684  84.267  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      43.778 111.735  84.964  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      44.594 111.097  85.993  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      45.572 111.357  85.865  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      44.326 111.448  86.912  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      42.955 112.792  85.678  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      41.800 113.089  85.402  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      43.641 113.372  86.699  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      43.061 113.933  87.256  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      44.483 111.308  82.376  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      44.509 111.538  80.930  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      45.671 111.504  80.355  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      46.897 111.276  80.939  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      47.000 111.108  81.933  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      47.746 111.273  80.385  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      45.780 111.712  79.000  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      46.679 111.689  78.531  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      44.961 111.893  78.430  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:      -4.9      2.046      2.372
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      45.131 111.470  83.078  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      45.237 110.701  81.752  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      46.091 111.448  80.716  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      46.606 112.686  81.295  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      46.725 113.384  80.562  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      45.922 113.072  81.945  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      45.288 111.859  79.495  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      44.121 112.229  79.513  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      46.025 111.800  78.354  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      46.888 111.357  78.500  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      43.789 111.254  83.769  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      42.800 112.196  83.242  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      41.721 112.362  83.943  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      41.386 111.758  85.134  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      41.993 111.086  85.591  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      40.508 111.967  85.596  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      40.743 113.229  83.515  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      39.892 113.373  84.049  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      40.846 113.750  82.652  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:      -4.9      1.921      2.141
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      43.384 111.321  81.513  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      44.377 110.263  82.018  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      45.702 110.887  82.483  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      45.459 111.791  83.604  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      45.473 112.756  83.274  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      44.523 111.633  83.976  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      46.355 111.727  81.401  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      46.771 112.869  81.552  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      46.459 111.056  80.223  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      45.986 111.516  79.498  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      42.105 111.361  82.342  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      42.199 112.416  83.353  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      42.088 112.048  84.592  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      41.891 110.776  85.082  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      41.808 109.969  84.474  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      41.820 110.606  86.079  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      42.165 112.979  85.601  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      42.081 112.712  86.576  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      42.308 113.962  85.397  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:      -4.9      1.484      1.997
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      45.254 110.344  83.329  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      46.115 110.825  82.151  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      45.293 111.603  81.112  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      44.499 110.675  80.311  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      44.071 111.175  79.532  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      45.108 109.972  79.895  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      46.171 112.358  80.130  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      46.138 112.227  78.913  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      47.000 113.236  80.755  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      47.853 113.332  80.281  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      44.254 111.400  83.788  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      44.373 111.603  85.233  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      43.393 112.221  85.817  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      42.243 112.716  85.243  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      42.056 112.634  84.250  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      41.540 113.185  85.803  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      43.429 112.453  87.172  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      42.673 112.934  87.648  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      44.215 112.146  87.735  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:      -4.8      2.818      5.471
+REMARK  Name = 6322
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_11
+REMARK    2  A    between atoms: N_3  and  CA_9
+REMARK    3  A    between atoms: NE_4  and  CD_10
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CB_7  and  CA_9
+REMARK    6  A    between atoms: CG_8  and  CD_10
+REMARK    7  A    between atoms: CA_9  and  C_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CG  ARG A   1      43.527 110.253  82.301  0.00  0.00    +0.043 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  CB  ARG A   1      42.389 110.494  83.304  0.00  0.00    +0.033 C 
+BRANCH   2   3
+ATOM      3  CA  ARG A   1      42.881 110.467  84.759  0.00  0.00    +0.161 C 
+BRANCH   3   4
+ATOM      4  N   ARG A   1      41.800 110.039  85.642  0.00  0.00    -0.318 NA
+ATOM      5  H1  ARG A   1      40.917 110.434  85.319  0.00  0.00    +0.119 HD
+ATOM      6  H2  ARG A   1      41.693 109.027  85.588  0.00  0.00    +0.119 HD
+ENDBRANCH   3   4
+BRANCH   3   7
+ATOM      7  C   ARG A   1      43.304 111.840  85.250  0.00  0.00    +0.322 C 
+ATOM      8  OXT ARG A   1      42.570 112.817  85.324  0.00  0.00    -0.249 OA
+BRANCH   7   9
+ATOM      9  O   ARG A   1      44.608 111.866  85.635  0.00  0.00    -0.480 OA
+ATOM     10  H   ARG A   1      45.118 111.123  85.249  0.00  0.00    +0.295 HD
+ENDBRANCH   7   9
+ENDBRANCH   3   7
+ENDBRANCH   2   3
+ENDBRANCH   1   2
+BRANCH   1  11
+ATOM     11  CD  ARG A   1      44.163 111.553  81.819  0.00  0.00    +0.243 C 
+BRANCH  11  12
+ATOM     12  NE  ARG A   1      44.044 111.655  80.364  0.00  0.00    -0.114 NA
+ATOM     13  CZ  ARG A   1      45.144 111.564  79.681  0.00  0.00    +0.376 C 
+ATOM     14  NH2 ARG A   1      46.423 111.381  80.159  0.00  0.00    -0.289 N 
+ATOM     15 HH21 ARG A   1      46.624 111.300  81.149  0.00  0.00    +0.255 HD
+ATOM     16 HH22 ARG A   1      47.213 111.324  79.527  0.00  0.00    +0.255 HD
+ATOM     17  NH1 ARG A   1      45.118 111.651  78.309  0.00  0.00    -0.289 N 
+ATOM     18 HH11 ARG A   1      45.966 111.582  77.757  0.00  0.00    +0.255 HD
+ATOM     19 HH12 ARG A   1      44.245 111.786  77.810  0.00  0.00    +0.255 HD
+ENDBRANCH  11  12
+ENDBRANCH   1  11
+TORSDOF 7
+ENDMDL
