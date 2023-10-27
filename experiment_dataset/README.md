@@ -1,4 +1,4 @@
-# EXPERIMENT DATASETS
+# DATASETS
 
 The dataset used in expriments are from SELLECK and DrugBank.
 
@@ -13,3 +13,7 @@ DrugBank is a comprehensive, freely accessible database containing information o
 ## Active Data
 
 The active molecule SMILES used in our virtual screening experiments were from [ChEMBL](https://chembl.gitbook.io/chembl-interface-documentation/downloads).We used activity data from Chembl on the three targets RIPK1, RIPK3, and AmpC β-lactamases to conduct virtual screening. The activity data used for each target is stored in csv format in a same-named folder in this directory.
+
+## Receptors
+
+The receptor used for each target in our experiment is in the folder with the same name under `receptor`. The `new` subfolder contains the receptors used in the Vina-GPU 3.0 related methods, while the `ori` subfolder contains the receptors used in other methods.
