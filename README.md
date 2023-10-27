@@ -1,17 +1,17 @@
 # Vina-GPU 2.1
 Vina-GPU 2.1 further improves the virtual screening runtime and accuracy with the noval RILC-BFGS and GCS mthods based on Vina-GPU 2.0. 
 Vina-GPU 2.1 includes AutoDock-Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1.
+![Vina-GPU2 1-arch](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1/assets/48940269/3b42ed59-01ce-449a-b203-deea1f0d0a36)
 
-![Vina-GPU3 0-arch](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1/assets/48940269/ddba03bf-e02e-4f22-ab29-e2e8bdff287f)
 
 
 ## Virtual Screening Results
 
 * Runtime comparison of Vina-GPU 2.1 on Drugbank library (partial)
-![runtime_all_drugbank](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1/assets/48940269/9616af84-9422-40eb-a1bc-8a06f9afdb30)
+![runtime_all_drugbank](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1/assets/48940269/d728fee5-d4a6-4a16-bbde-cec06a81e38d)
 
 * Accuracy comparison of Vina-GPU 2.1 on Drugbank library (partial)
-![vs_accuracy_all_drugbank](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1/assets/48940269/ef0a1824-ca1b-4360-b521-84662895e646)
+![vs_accuracy_all_drugbank](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1/assets/48940269/eacffd1d-cb2a-40d9-9a74-4e8d071aac7b)
 
 ## Compiling and Running
 ### Windows
