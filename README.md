@@ -49,7 +49,7 @@ Vina-GPU 2.1 includes AutoDock-Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W
     
 6. type `make clean` and `make source` to build `$(ONE_OF_VINA_GPU_2_1_METHODS)` that compile the kernel files on the fly (this would take some time at the first use)
 7. after a successful compiling, `$(ONE_OF_VINA_GPU_2_1_METHODS)` can be seen in the directory 
-8. type `$(ONE_OF_VINA_GPU_2_1_METHODS) --config ./input_file_example/2bm2_config.txt` to run one of the Vina-GPU 2.1 method
+8. change `--opencl_binary_path` in the `./input_file_example/2bm2_config.txt` accordingly and type `$(ONE_OF_VINA_GPU_2_1_METHODS) --config ./input_file_example/2bm2_config.txt` to run one of the Vina-GPU 2.1 method
 9. once you successfully run `$(ONE_OF_VINA_GPU_2_1_METHODS)`, its runtime can be further reduced by typing `make clean` and `make` to build it without compiling kernel files (but make sure the `Kernel1_Opt.bin` file and `Kernel2_Opt.bin` file is located in the dir specified by `--opencl_binary_path`)
 10. other compile options: 
 
