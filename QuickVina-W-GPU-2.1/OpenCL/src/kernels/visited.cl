@@ -122,8 +122,8 @@ inline vec3_cl boxsize_init(float size_x, float size_y, float size_z) {
 inline int set_Binary_Id_cl(int thread, int search_depth, output_type_cl* x, vec3_cl* origin, vec3_cl* dimension) {
 	int n = get_n(thread, search_depth) - 3;
 	int binary_id = 0;
-	//int oct[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	int oct[10];
+	int oct[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	// int oct[10];
 	for (int i = 0; i < n / 3; i++) {
 		if (x->position[0] >= origin->x) oct[i] |= 1;
 		if (x->position[1] >= origin->y) oct[i] |= 2;
@@ -162,6 +162,8 @@ inline int set_Binary_Id_cl(int thread, int search_depth, output_type_cl* x, vec
 			origin->y = origin->y + dimension->y / (4 << (2 * i));
 			origin->z = origin->z + dimension->z / (4 << (2 * i));
 			break;
+		default:
+		    printf("Error at function set_Binary_Id_cl \n");
 		}
 	}
 	for (int i = 0; i < n / 3; i++) {
