@@ -158,7 +158,7 @@ bool check(visited_cl* visited, output_type_cl* now_x, float now_f, change_cl* n
 			}
 		}
 	}
-	
+	return false;
 }
 inline float dist2_cl(output_type_cl* now, visited_cl* visited, int neighbor, int lig_torsion_size) {
 	float out = 0;

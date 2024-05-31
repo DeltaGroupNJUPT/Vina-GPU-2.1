@@ -350,7 +350,12 @@ void SetupBuildProgramWithSource(cl_program program_cl, cl_program program_head,
     //const char* input_head_names[1] = { "defines.h" };
     //cl_program input_head[1] = { program_head };
     //  -cl-opt-disable -cl-single-precision-constant -cl-unsafe-math-optimizations -cl-finite-math-only -cl-no-signed-zeros -cl-strict-aliasing
-    std::string option = " -Werror -cl-single-precision-constant -cl-unsafe-math-optimizations -cl-mad-enable -cl-std=";
+#ifdef LARGE_BOX
+    std::string option = " -Werror -cl-single-precision-constant -cl-unsafe-math-optimizations -DLARGE_BOX -cl-mad-enable -cl-std=";
+#endif
+#ifdef SMALL_BOX
+    std::string option = " -Werror -cl-single-precision-constant -cl-unsafe-math-optimizations -DSMALL_BOX -cl-mad-enable -cl-std=";
+#endif
 #ifdef OPENCL_1_2
     option += std::string("CL1.2");
     printf("\nOpenCL version: 1.2\n");fflush(stdout);

@@ -22,10 +22,21 @@
 #define GRIDS_SIZE 17
 #define MAX_NUM_OF_PROTEIN_ATOMS 50000
 
-#define MAX_NUM_OF_GRID_MI 128//55
-#define MAX_NUM_OF_GRID_MJ 128//55
-#define MAX_NUM_OF_GRID_MK 128//81
+#ifdef LARGE_BOX
+	// docking box size <= 70x70x70
+	#define MAX_NUM_OF_GRID_MI 300
+	#define MAX_NUM_OF_GRID_MJ 300
+	#define MAX_NUM_OF_GRID_MK 300
+	#define MAX_NUM_OF_ATOM_RELATION_COUNT 38000
+#endif
 
+#ifdef SMALL_BOX
+	// docking box size <= 30x30x30
+	#define MAX_NUM_OF_GRID_MI 128
+	#define MAX_NUM_OF_GRID_MJ 128
+	#define MAX_NUM_OF_GRID_MK 128
+	#define MAX_NUM_OF_ATOM_RELATION_COUNT 1024
+#endif
 //#define GRID_MI 65//55
 //#define GRID_MJ 71//55
 //#define GRID_MK 61//81
@@ -42,7 +53,6 @@
 #define XS_TYPE_SIZE 17
 #define SY_TYPE_SIZE 18
 
-#define MAX_NUM_OF_ATOM_RELATION_COUNT 1024
 
 typedef struct {
 	float data[GRIDS_SIZE];

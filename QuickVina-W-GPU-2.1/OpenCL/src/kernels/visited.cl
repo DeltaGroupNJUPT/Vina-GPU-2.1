@@ -382,6 +382,7 @@ inline bool check_cl(ele_cl* list_cl, output_type_cl* now_x, float now_f, change
 			}
 		}
 	}*/
+	return false;
 }
 
 

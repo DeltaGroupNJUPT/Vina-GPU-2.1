@@ -268,12 +268,12 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 	size_t gb_size = sizeof(gb_cl);
 
 	// Preparing atom relationship
-	if(MAX_NUM_OF_ATOM_RELATION_COUNT < ig.m_data.m_data.size()){throw std::runtime_error("relation too large!");}
-	assert(ig.m_data.m_i <= 10); assert(ig.m_data.m_j <= 10); assert(ig.m_data.m_k <= 10);
+	if(MAX_NUM_OF_ATOM_RELATION_COUNT < ig.m_data.m_data.size()){throw std::runtime_error("Relation too large! Define a large box (see readme) would help");}
+	// assert(ig.m_data.m_i <= 10); assert(ig.m_data.m_j <= 10); assert(ig.m_data.m_k <= 10);
 	ar_cl* ar_ptr = (ar_cl*)malloc(sizeof(ar_cl));
 	for (int i = 0; i < ig.m_data.m_data.size(); i++) {
 		ar_ptr->relation_size[i] = ig.m_data.m_data[i].size();
-		if(MAX_NUM_OF_ATOM_RELATION_COUNT < ar_ptr->relation_size[i]){throw std::runtime_error("relation too large!");}
+		if(MAX_NUM_OF_ATOM_RELATION_COUNT < ar_ptr->relation_size[i]){throw std::runtime_error("Relation too large! Define a large box (see readme) would help");}
 		for (int j = 0; j < ar_ptr->relation_size[i]; j++) {
 			ar_ptr->relation[i][j] = ig.m_data.m_data[i][j];
 		}
@@ -282,7 +282,7 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 
 	// Preparing grid related data
 	if(GRIDS_SIZE != c.grids.size()){throw std::runtime_error("grid_size has to be 17!");} // grid_size has to be 17
-	grids_cl* grids_ptr = (grids_cl*)malloc(sizeof(grids_cl));
+	grids_cl* grids_ptr = (grids_cl*)malloc(sizeof(grids_cl)); if (grids_ptr == nullptr) {throw std::runtime_error("Grid too large! Define a large box (see readme) would help");}
 	grid* tmp_grid_ptr = &c.grids[0];
 
 	grids_ptr->atu = c.atu; // atu
@@ -296,9 +296,9 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 			grids_ptr->grids[i].m_factor_inv[j] = tmp_grid_ptr[i].m_factor_inv[j];
 		}
 		if (tmp_grid_ptr[i].m_data.dim0() != 0) {
-			grids_ptr->grids[i].m_i = tmp_grid_ptr[i].m_data.dim0(); assert(MAX_NUM_OF_GRID_MI >= grids_ptr->grids[i].m_i);
-			grids_ptr->grids[i].m_j = tmp_grid_ptr[i].m_data.dim1(); assert(MAX_NUM_OF_GRID_MJ >= grids_ptr->grids[i].m_j);
-			grids_ptr->grids[i].m_k = tmp_grid_ptr[i].m_data.dim2(); assert(MAX_NUM_OF_GRID_MK >= grids_ptr->grids[i].m_k);
+			grids_ptr->grids[i].m_i = tmp_grid_ptr[i].m_data.dim0(); if(MAX_NUM_OF_GRID_MI < grids_ptr->grids[i].m_i){throw std::runtime_error("MAX_NUM_OF_GRID_MI too small!  Define a large box (see readme) would help");}
+			grids_ptr->grids[i].m_j = tmp_grid_ptr[i].m_data.dim1(); if(MAX_NUM_OF_GRID_MJ < grids_ptr->grids[i].m_j){throw std::runtime_error("MAX_NUM_OF_GRID_MJ too small!  Define a large box (see readme) would help");}
+			grids_ptr->grids[i].m_k = tmp_grid_ptr[i].m_data.dim2(); if(MAX_NUM_OF_GRID_MK < grids_ptr->grids[i].m_k){throw std::runtime_error("MAX_NUM_OF_GRID_MK too small!  Define a large box (see readme) would help");}
 			grids_front = i;
 		}
 		else {

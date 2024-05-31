@@ -764,7 +764,7 @@ void bfgs(					output_type_cl*			x,
 		}
 
 		if (!global_flag) {
-			add_to_global_buffer(&g_container, thread, search_depth, x, f0, g, origin, box_size, global_ptr, count_id, torsion_size);
+			add_to_global_buffer(g_container, thread, search_depth, x, f0, g, origin, box_size, global_ptr, count_id, torsion_size);
 		}
 
 		if (!(f0 <= f_orig)) {
@@ -1085,7 +1085,7 @@ void rilc_bfgs(					output_type_cl*			x,
 		}
 		
 		if (!global_flag) {
-			add_to_global_buffer(&g_container, thread, search_depth, x, fx, g, origin, box_size, global_ptr, count_id, torsion_size);
+			add_to_global_buffer(g_container, thread, search_depth, x, fx, g, origin, box_size, global_ptr, count_id, torsion_size);
 		}
 
 		if (!(fx <= fx_orig)) {

@@ -55,7 +55,7 @@ const __global int* possibilities(						float*		coords,
 	}
 	int temp = index[0] + m_data_dims[0] * (index[1] + m_data_dims[1] * index[2]);
 	const __global int* address;
-	address = &(ar->relation[temp]);
+	address = &(ar->relation[temp][0]);
 	*relation_count = ar->relation_size[temp];
 	return address;
 }
