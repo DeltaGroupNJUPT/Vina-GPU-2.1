@@ -58,7 +58,15 @@ Vina-GPU 2.1 includes AutoDock-Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W
 | -g | debug|
 |-DTIME_ANALYSIS|output runtime analysis in `gpu_runtime.log`|
 |-DDISPLAY_ADDITION_INFO|print addition information
-    
+
+## Enlarge the docking box
+The docking box now can be enlarged by
+
+1. Change `-DSMALL_BOX` into `-DLARGE_BOX` in `Makefile`
+2. Type `make source` and `$(ONE_OF_VINA_GPU_2_1_METHODS) --config ./input_file_example/2bm2_config.txt`
+3. Once the tutorial docking is finished, type `make clearn` and `make`
+4. Now you can enlarge the docking box `--size_x/y/z` accordingly (see **Limitation** below)
+
 ## Structure Optimization
 |Optimization|Methods|Reference|
 |--|--|--|	
@@ -84,7 +92,7 @@ Vina-GPU 2.1 includes AutoDock-Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W
 |Arguments| Description|Limitation
 |--|--|--|
 |--thread| the scale of parallelism (docking lanes)| preferably less than 10000
-|--size_x/y/z|the volume of the searching box |less than 30/30/30
+|--size_x/y/z|the volume of the searching box |less than 100/100/100 for AutoDock-Vina-GPU 2.1 and 70/70/70 for other two variants
 
 ## Citation
 * Ding J, Tang S, Mei Z, et al. Vina-GPU 2.0: Further Accelerating AutoDock Vina and Its Derivatives with Graphics Processing Units[J]. Journal of Chemical Information and Modeling, 2023, 63(7): 1982-1998.
