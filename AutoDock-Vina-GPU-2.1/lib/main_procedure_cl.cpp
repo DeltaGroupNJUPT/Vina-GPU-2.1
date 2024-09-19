@@ -419,15 +419,17 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 
 	for (int ligand_count = 0; ligand_count < num_ligands; ligand_count++) {
 # ifndef NDEBUG
-		printf("\nDocking ligand: %s", ligand_names[ligand_count][0].c_str());
+		printf("\nDocking ligand: %s\n", ligand_names[ligand_count][0].c_str());
 # endif
 	try {
 		model m = ms[ligand_count];
-		if(m.atoms.size() >= MAX_NUM_OF_ATOMS){throw std::runtime_error("Ligand too large!");}
+		if(m.atoms.size() >= MAX_NUM_OF_ATOMS){throw std::runtime_error("Ligand too large! The maximum number of atoms is " +
+		 std::to_string(MAX_NUM_OF_ATOMS) + " and the ligand has " + std::to_string(m.atoms.size()) + " atoms.");}
 
 		output_type tmp = tmps[ligand_count];
 		torsion_sizes[ligand_count] = tmp.c.ligands[0].torsions.size();
-		if (tmp.c.ligands[0].torsions.size() >= MAX_NUM_OF_LIG_TORSION) { throw std::runtime_error("Ligand too large!"); }
+		if (tmp.c.ligands[0].torsions.size() >= MAX_NUM_OF_LIG_TORSION) { throw std::runtime_error("Ligand too large! The maximum number of torsions is " +
+		 std::to_string(MAX_NUM_OF_LIG_TORSION) + " and the ligand has " + std::to_string(tmp.c.ligands[0].torsions.size()) + " torsions."); }
 
 		// Generate random maps
 		rand_maps_ptrs[ligand_count] = (random_maps*)malloc(sizeof(random_maps));
@@ -493,7 +495,8 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 		if(m.num_other_pairs() != 0){throw std::runtime_error("m.other_paris is not supported!");} // m.other_paris is not supported!
 		if(m.ligands.size() != 1){throw std::runtime_error("Only one ligand supported!");} // Only one ligand supported!
 		m_ptr->ligand.pairs.num_pairs = m.ligands[0].pairs.size();
-		if (m.ligands[0].pairs.size() >= MAX_NUM_OF_LIG_PAIRS) { throw std::runtime_error("Ligand too large!"); }
+		if (m.ligands[0].pairs.size() >= MAX_NUM_OF_LIG_PAIRS) { throw std::runtime_error("Ligand too large! The maximum number of pairs is " + 
+		std::to_string(MAX_NUM_OF_LIG_PAIRS) + " and the ligand has " + std::to_string(m.ligands[0].pairs.size()) + " pairs."); }
 		for (int i = 0; i < m_ptr->ligand.pairs.num_pairs; i++) {
 			m_ptr->ligand.pairs.type_pair_index[i] = m.ligands[0].pairs[i].type_pair_index;
 			m_ptr->ligand.pairs.a[i] = m.ligands[0].pairs[i].a;
@@ -502,7 +505,8 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 		m_ptr->ligand.begin = m.ligands[0].begin; // 0
 		m_ptr->ligand.end = m.ligands[0].end; // 29
 		ligand m_ligand = m.ligands[0]; // Only support one ligand 
-		if(m_ligand.end >= MAX_NUM_OF_ATOMS){throw std::runtime_error("Ligand too large!");}
+		if(m_ligand.end >= MAX_NUM_OF_ATOMS){throw std::runtime_error("Ligand too large! The maximum number of atoms is " +
+		 std::to_string(MAX_NUM_OF_ATOMS) + " and the ligand has " + std::to_string(m_ligand.end) + " atoms.");}
 
 		// Store root node
 		m_ptr->ligand.rigid.atom_range[0][0] = m_ligand.node.begin;
@@ -660,7 +664,10 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 		err = clReleaseEvent(ligands_events[ligand_count]);			checkErr(err);
 #endif // !TIME_ANALYSIS
 	}
-	catch(...){
+	catch(const std::exception& e){
+		std::cerr << "Error processing ligand " << ligand_count << ": " << ligand_names[ligand_count][0] << std::endl;
+		std::cerr << "Exception: " << e.what() << std::endl;
+		std::cerr << "Skipping this ligand and continuing with the next one." << std::endl;
 		continue;
 	}
 	}
