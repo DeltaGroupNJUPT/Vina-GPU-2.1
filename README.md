@@ -68,11 +68,11 @@ The docking box now can be enlarged by
 4. Now you can enlarge the docking box `--size_x/y/z` accordingly (see **Limitation** below)
 
 ## Structure Optimization
-|Optimization|Methods|Reference|
+|Optimization|Methods|Reference|Documentation
 |--|--|--|	
-|Receptor Preparation|cross-docking| [origin paper](https://doi.org/10.1016/j.bmc.2022.116686)
-|Binding Pocket Prediction|COACH-D|[origin paper](https://doi.org/10.1093/nar/gky439)
-|Ligand Optimization| Gypsum-DL | [origin paper](https://doi.org/10.1186/s13321-019-0358-3)
+|Receptor Preparation|cross-docking| [origin paper](https://doi.org/10.1016/j.bmc.2022.116686) | [Doc](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.biorxiv.org/content/10.1101/2023.11.04.565429v1.full.pdf)
+|Binding Pocket Prediction|COACH-D|[origin paper](https://doi.org/10.1093/nar/gky439) | [Doc](https://yanglab.qd.sdu.edu.cn/COACH-D/help/)
+|Ligand Optimization| Gypsum-DL | [origin paper](https://doi.org/10.1186/s13321-019-0358-3) | [Doc](https://github.com/durrantlab/gypsum_dl/blob/main/README.md)
 
 ## Usage
 |Arguments| Description|Default value
