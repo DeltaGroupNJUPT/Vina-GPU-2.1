@@ -95,7 +95,8 @@ The docking box now can be enlarged by
 |--size_x/y/z|the volume of the searching box |less than 100/100/100 for AutoDock-Vina-GPU 2.1 and 70/70/70 for other two variants
 
 ## Citation
-* Ding J, Tang S, Mei Z, et al. Vina-GPU 2.0: Further Accelerating AutoDock Vina and Its Derivatives with Graphics Processing Units[J]. Journal of Chemical Information and Modeling, 2023, 63(7): 1982-1998.
+* Tang, Shidi, et al. "Vina-GPU 2.1: towards further optimizing docking speed and precision of AutoDock Vina and its derivatives." IEEE/ACM Transactions on Computational Biology and Bioinformatics (2024).
+* Ding, Ji, et al. "Vina-GPU 2.0: further accelerating AutoDock Vina and its derivatives with graphics processing units." Journal of chemical information and modeling 63.7 (2023): 1982-1998.
 * Tang, Shidi et al. “Accelerating AutoDock Vina with GPUs.” Molecules (Basel, Switzerland) vol. 27,9 3041. 9 May. 2022, doi:10.3390/molecules27093041
 * Trott, Oleg, and Arthur J. Olson. "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading." Journal of computational chemistry 31.2 (2010): 455-461.
 * Hassan, N. M. , et al. "Protein-Ligand Blind Docking Using QuickVina-W With Inter-Process Spatio-Temporal Integration." Scientific Reports 7.1(2017):15451.
