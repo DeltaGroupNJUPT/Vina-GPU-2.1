@@ -737,7 +737,7 @@ Thank you!\n";
 		}
 
 		if (vm.count("ligand") <= 0 && vm.count("ligand_directory") == 1) {
-			std::cout << "Using virtual sreening mode\n\n";
+			std::cout << "Using virtual screening mode\n\n";
 		}
 
 		if (vm.count("ligand") <= 0 && vm.count("ligand_directory") <= 0) {
