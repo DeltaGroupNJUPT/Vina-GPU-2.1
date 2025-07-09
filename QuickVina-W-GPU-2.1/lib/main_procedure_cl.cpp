@@ -78,6 +78,7 @@ std::vector<output_type> cl_to_vina(output_type_cl result_ptr[],
 		for (int j = 0; j < MAX_NUM_OF_ATOMS; j++) {
 			vec v_tmp(tmp_coords.coords[j][0], tmp_coords.coords[j][1], tmp_coords.coords[j][2]);
 			if ((v_tmp[0] != 0 || v_tmp[1] != 0) || (v_tmp[2] != 0)) tmp_vina.coords.push_back(v_tmp);
+			tmp_vina.coords.push_back(v_tmp);
 		}
 		results_vina.push_back(tmp_vina);
 		if (i == 0)num_atoms = tmp_vina.coords.size();
@@ -92,6 +93,7 @@ int get_n(int thread, int search_depth) {
 			return i;
 	}
 }
+
 
 void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalculate& p, const parallel_mc par,
 	const vec& corner1, const vec& corner2, const int seed, std::vector<output_container>& outs, std::string opencl_binary_path,
@@ -563,7 +565,7 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 			}
 		};
 		tmp_struct ts;
- 		for (int i = 0; i < m_ligand.children.size(); i++) {
+		for (int i = 0; i < m_ligand.children.size(); i++) {
 			ts.parent_index = 0; // Start a new branch, whose parent is 0
 			ts.store_node(m_ligand.children[i], m_ptr->ligand.rigid);
 		}
@@ -585,7 +587,7 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 
 		// Init results
 		result_ptrs[ligand_count] = (output_type_cl*)malloc(par.mc.thread * sizeof(output_type_cl));
-
+		size_t global_buffer_size = pow(2, code_num) * sizeof(ele_cl);
 		//cl_mem ric_gpu;
 		CreateDeviceBuffer(&ric_gpus[ligand_count], CL_MEM_READ_ONLY, ric_size, context);
 		err = clEnqueueWriteBuffer(queue, ric_gpus[ligand_count], false, 0, ric_size, ric_ptr, 0, NULL, NULL); checkErr(err);
@@ -611,12 +613,17 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 
 		//allocate global_buffer
 		ele_cl output_type_c;
-		size_t global_buffer_size = pow(2, code_num) * sizeof(ele_cl);
 		cl_mem global_buffer_gpu;
 		CreateDeviceBuffer(&global_buffer_gpu, CL_MEM_READ_WRITE, global_buffer_size, context);
+		size_t kernel2_global_size[2] = { 512, 32 };
+		size_t kernel2_local_size[2] = { 16, 2 };
+
+		// Before kernel launch, allocate all_lists buffer for individual_container
+		size_t num_work_items = kernel2_global_size[0] * kernel2_global_size[1];
+		cl_mem all_lists_gpu;
+		CreateDeviceBuffer(&all_lists_gpu, CL_MEM_READ_WRITE, num_work_items * sizeof(individual_container), context);
 
 		clFinish(queue);
-
 		SetKernelArg(kernels[1], 0, sizeof(cl_mem), &ric_gpus[ligand_count]);
 		SetKernelArg(kernels[1], 1, sizeof(cl_mem), &m_gpus[ligand_count]);
 		SetKernelArg(kernels[1], 2, sizeof(cl_mem), &pre_gpu);
@@ -637,8 +644,7 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 		SetKernelArg(kernels[1], 17, sizeof(cl_mem), &global_buffer_gpu);
 		SetKernelArg(kernels[1], 18, sizeof(cl_mem), &count_gpu);
 		SetKernelArg(kernels[1], 19, sizeof(int), 	&rilc_bfgs);
-		size_t kernel2_global_size[2] = { 512, 32 };
-		size_t kernel2_local_size[2] = { 16,2 };
+		SetKernelArg(kernels[1], 20, sizeof(cl_mem), &all_lists_gpu); // new argument
 
 		err = clEnqueueNDRangeKernel(queue, kernels[1], 2, 0, kernel2_global_size, kernel2_local_size,
 			0, NULL, &ligands_events[ligand_count]); checkErr(err);
@@ -686,11 +692,29 @@ void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalcula
 		err = clReleaseMemObject(random_maps_gpus[ligand_count]);	checkErr(err);
 		err = clReleaseMemObject(global_buffer_gpu); 				checkErr(err);
 		err = clReleaseMemObject(count_gpu); 						checkErr(err);
+		err = clReleaseMemObject(all_lists_gpu); checkErr(err);
 #ifndef TIME_ANALYSIS
 		err = clReleaseEvent(ligands_events[ligand_count]);			checkErr(err);
 #endif // !TIME_ANALYSIS
 	}
 	catch(...){
+		// Robust cleanup for all per-ligand OpenCL resources
+		printf("[Cleanup] Exception caught for ligand %d. Releasing OpenCL resources...\n", ligand_count);
+		if (result_coords_gpus[ligand_count]) { clReleaseMemObject(result_coords_gpus[ligand_count]); printf("Released result_coords_gpu\n"); }
+		if (result_gpus[ligand_count])        { clReleaseMemObject(result_gpus[ligand_count]);        printf("Released result_gpu\n"); }
+		if (ric_gpus[ligand_count])           { clReleaseMemObject(ric_gpus[ligand_count]);           printf("Released ric_gpu\n"); }
+		if (m_gpus[ligand_count])             { clReleaseMemObject(m_gpus[ligand_count]);             printf("Released m_gpu\n"); }
+		if (random_maps_gpus[ligand_count])   { clReleaseMemObject(random_maps_gpus[ligand_count]);   printf("Released random_maps_gpu\n"); }
+		// if (all_lists_gpu) { clReleaseMemObject(all_lists_gpu); printf("Released all_lists_gpu\n"); }
+		#ifndef TIME_ANALYSIS
+		if (ligands_events[ligand_count])      { clReleaseEvent(ligands_events[ligand_count]);         printf("Released ligand event\n"); }
+		#endif
+		// Free host-side allocations
+		if (rand_maps_ptrs[ligand_count])      { free(rand_maps_ptrs[ligand_count]);                  printf("Freed rand_maps_ptr\n"); }
+		if (ric_ptrs[ligand_count])            { free(ric_ptrs[ligand_count]);                        printf("Freed ric_ptr\n"); }
+		if (m_ptrs[ligand_count])              { free(m_ptrs[ligand_count]);                          printf("Freed m_ptr\n"); }
+		if (result_coords_ptrs[ligand_count])  { free(result_coords_ptrs[ligand_count]);              printf("Freed result_coords_ptr\n"); }
+		if (result_ptrs[ligand_count])         { free(result_ptrs[ligand_count]);                     printf("Freed result_ptr\n"); }
 		continue;
 	}
 	}

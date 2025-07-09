@@ -1,7 +1,7 @@
 # Need to be modified according to different users
-WORK_DIR=/home/shidi/Vina-GPU-2.1/QuickVina-W-GPU-2.1
-BOOST_LIB_PATH=/home/shidi/boost_1_84_0
-OPENCL_LIB_PATH=/usr/local/cuda
+WORK_DIR=/home/vinay/code/Vina-GPU-2.1/QuickVina-W-GPU-2.1
+BOOST_LIB_PATH=/home/vinay/boost_1_77_0
+OPENCL_LIB_PATH=/usr/include/CL
 OPENCL_VERSION=-DOPENCL_3_0
 GPU_PLATFORM=-DNVIDIA_PLATFORM
 DOCKING_BOX_SIZE=-DSMALL_BOX

@@ -30,26 +30,27 @@ bool metropolis_accept(float old_f, float new_f, float temperature, float n) {
 
 __kernel
 void kernel2(
-				const		__global		output_type_cl*			ric,
-							__global		m_cl*					mg,
-							__constant		pre_cl*					pre,
-							__constant		grids_cl*				grids,
-							__constant		random_maps*			random_maps,
-							__global		ligand_atom_coords_cl*	coords,
-							__global		output_type_cl*			results,
-				const		__global		mis_cl*					mis,
-				const						int						torsion_size,
-				const						int						search_depth,
-				const						int						max_bfgs_steps,
-											float					center_x,
-											float					center_y,
-											float					center_z,
-											float					size_x,
-											float					size_y,
-											float					size_z,
-							__global    	ele_cl*					global_ptr,
-							__global    	int*           			count_id,
-				const 						int						rilc_bfgs_enable
+				const		__global		output_type_cl* ric,
+						__global		m_cl* mg,
+						__constant		pre_cl* pre,
+						__constant		grids_cl* grids,
+						__constant		random_maps* random_maps,
+						__global		ligand_atom_coords_cl* coords,
+						__global		output_type_cl* results,
+				const	__global		mis_cl* mis,
+				const				int torsion_size,
+				const				int search_depth,
+				const				int max_bfgs_steps,
+									float center_x,
+									float center_y,
+									float center_z,
+									float size_x,
+									float size_y,
+									float size_z,
+						__global    	ele_cl* global_ptr,
+						__global    	int* count_id,
+				const 				int rilc_bfgs_enable,
+				__global    	individual_container* all_lists
 ) {
 	int gx = get_global_id(0);
 	int gy = get_global_id(1);
@@ -76,8 +77,9 @@ void kernel2(
 
 		output_type_cl candidate;
 
-		__private individual_container list;
-		circularvisited_init_cl(&list);
+		// Use global memory for list
+		__global individual_container* list = &all_lists[gl];
+		circularvisited_init_cl(list);
 
 		global_container g_container;
 		global_init_cl(&g_container);
@@ -111,7 +113,7 @@ void kernel2(
 						max_bfgs_steps,
 						true,
 						&g_container,
-						&list,
+						list,
 						search_depth,
 						&origin,
 						&boxsize,
@@ -129,7 +131,7 @@ void kernel2(
 						max_bfgs_steps,
 						true,
 						&g_container,
-						&list,
+						list,
 						search_depth,
 						&origin,
 						&boxsize,
@@ -159,7 +161,7 @@ void kernel2(
 								max_bfgs_steps,
 								false,
 								&g_container,
-								&list,
+								list,
 								search_depth,
 								&origin,
 								&boxsize,
@@ -177,7 +179,7 @@ void kernel2(
 								max_bfgs_steps,
 								false,
 								&g_container,
-								&list,
+								list,
 								search_depth,
 								&origin,
 								&boxsize,

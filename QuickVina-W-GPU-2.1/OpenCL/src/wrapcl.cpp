@@ -296,14 +296,16 @@ void SetupDevice(cl_platform_id* platforms, cl_device_id** devices, cl_int gpu_p
         err = clGetDeviceInfo((*devices)[i], CL_DEVICE_NAME, 0, NULL, &device_name_size); checkErr(err);
         char* device_name = (char*)malloc(sizeof(char) * device_name_size);
         err = clGetDeviceInfo((*devices)[i], CL_DEVICE_NAME, device_name_size, device_name, NULL);
-        printf("\nGPU Device: %s", device_name);
-
-#ifdef DISPLAY_ADDITION_INFO
-        err = clGetDeviceInfo((*devices)[i], CL_DEVICE_GLOBAL_MEM_SIZE, sizeof(cl_ulong), &mem_size, NULL);
-        printf("Platform %d global memory size:%f GB\n", N, (double)mem_size/1000000000);
-        err = clGetDeviceInfo((*devices)[i], CL_DEVICE_LOCAL_MEM_SIZE, sizeof(cl_ulong), &mem_size, NULL);
-        printf("Platform %d local memory size:%f KB\n", N, (double)mem_size / 1000);
-#endif
+        cl_device_type dtype;
+        clGetDeviceInfo((*devices)[i], CL_DEVICE_TYPE, sizeof(dtype), &dtype, NULL);
+        cl_uint vendor_id;
+        clGetDeviceInfo((*devices)[i], CL_DEVICE_VENDOR_ID, sizeof(vendor_id), &vendor_id, NULL);
+        cl_ulong global_mem = 0;
+        clGetDeviceInfo((*devices)[i], CL_DEVICE_GLOBAL_MEM_SIZE, sizeof(global_mem), &global_mem, NULL);
+        printf("\nOpenCL Device %d: %s\n  Type: %s\n  Vendor ID: %u\n  Global Mem: %.2f MB\n", i, device_name,
+            (dtype == CL_DEVICE_TYPE_GPU ? "GPU" : (dtype == CL_DEVICE_TYPE_CPU ? "CPU" : "Other")),
+            vendor_id, global_mem / (1024.0 * 1024.0));
+        free(device_name);
     }
 }
 
