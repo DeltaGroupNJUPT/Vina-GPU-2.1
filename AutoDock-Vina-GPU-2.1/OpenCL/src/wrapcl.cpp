@@ -374,14 +374,39 @@ void SetupBuildProgramWithSource(cl_program program_cl, cl_program program_head,
     //Build program
     err = clBuildProgram(program_cl, 1, devices, options, NULL, NULL);
     if (CL_SUCCESS != err) {
-        printf("\nError: Failed to build program executable!");
+        printf("\nError: Failed to build program executable! (clBuildProgram err=%d)\n", err);
+        fflush(stdout);
         char* buffer;
-        size_t logsize;
+        size_t logsize = 0;
         //Building log
-        err = clGetProgramBuildInfo(program_cl, *devices, CL_PROGRAM_BUILD_LOG, 0, NULL, &logsize); checkErr(err);
-        buffer = (char*)malloc(logsize * sizeof(char));
-        err = clGetProgramBuildInfo(program_cl, *devices, CL_PROGRAM_BUILD_LOG, logsize, buffer, NULL); checkErr(err);
-        printf("\nlog:%s", buffer);
+        cl_int log_err = clGetProgramBuildInfo(program_cl, *devices, CL_PROGRAM_BUILD_LOG, 0, NULL, &logsize);
+        if (log_err != CL_SUCCESS) {
+            printf("clGetProgramBuildInfo(size) failed with err=%d\n", log_err);
+            fflush(stdout);
+            exit(-1);
+        }
+        buffer = (char*)malloc((logsize + 1) * sizeof(char));
+        log_err = clGetProgramBuildInfo(program_cl, *devices, CL_PROGRAM_BUILD_LOG, logsize, buffer, NULL);
+        if (log_err != CL_SUCCESS) {
+            printf("clGetProgramBuildInfo(data) failed with err=%d\n", log_err);
+            fflush(stdout);
+            free(buffer);
+            exit(-1);
+        }
+        buffer[logsize] = '\0';  // guarantee null termination
+        // Print full log to stdout
+        printf("\n=== OpenCL Build Log (logsize=%zu bytes) ===\n", logsize);
+        printf("%s\n", buffer);
+        printf("=== End of OpenCL Build Log ===\n");
+        fflush(stdout);
+        // Also write to file in case stdout buffering loses content during exit
+        FILE* logfile = fopen("opencl_build_log.txt", "w");
+        if (logfile) {
+            fwrite(buffer, 1, logsize, logfile);
+            fclose(logfile);
+            printf("Build log also written to opencl_build_log.txt\n");
+            fflush(stdout);
+        }
         free(buffer);
         exit(-1);
     }
